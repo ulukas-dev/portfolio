@@ -1,0 +1,57 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum MovementType {
+  IN
+  OUT
+}
+
+model User {
+  id           String           @id @default(cuid())
+  name         String
+  email        String           @unique
+  passwordHash String
+  createdAt    DateTime         @default(now())
+  products     Product[]
+  movements    StockMovement[]
+}
+
+model Product {
+  id          String          @id @default(cuid())
+  name        String
+  sku         String          @unique
+  description String?
+  category    String
+  price       Decimal         @db.Decimal(12, 2)
+  quantity    Int             @default(0)
+  minQuantity Int             @default(5)
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+  ownerId     String
+  owner       User            @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  movements   StockMovement[]
+
+  @@index([ownerId, name])
+  @@index([ownerId, category])
+}
+
+model StockMovement {
+  id        String       @id @default(cuid())
+  type      MovementType
+  quantity  Int
+  note      String?
+  createdAt DateTime     @default(now())
+  productId String
+  product   Product      @relation(fields: [productId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([productId, createdAt])
+  @@index([userId, createdAt])
+}

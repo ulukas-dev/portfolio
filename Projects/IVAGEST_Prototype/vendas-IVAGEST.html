@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IVAGEST | Vendas e Faturação</title>
+  <link rel="stylesheet" href="style-IVAGEST.css">
+</head>
+<body>
+
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="index-IVAGEST.html">
+      <span class="brand-mark">IV</span>
+      <span>IVAGEST<small>GESTÃO & CONTABILIDADE</small></span>
+    </a>
+
+    <nav>
+      <a class="nav-link" href="index-IVAGEST.html"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+      <a class="nav-link active" href="vendas-IVAGEST.html"><i data-lucide="shopping-cart"></i> Vendas</a>
+      <a class="nav-link" href="compras-IVAGEST.html"><i data-lucide="shopping-bag"></i> Compras</a>
+      <a class="nav-link" href="area_contabilidade-IVAGEST.html"><i data-lucide="calculator"></i> Contabilidade</a>
+      <a class="nav-link" href="area_stock-IVAGEST.html"><i data-lucide="package"></i> Stock</a>
+      <a class="nav-link" href="clientes-IVAGEST.html"><i data-lucide="users"></i> Clientes</a>
+      <a class="nav-link" href="relatorios-IVAGEST.html"><i data-lucide="chart-no-axes-combined"></i> Relatórios</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <i data-lucide="shield-check"></i>
+      <span>Os teus dados, protegidos.</span>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="menu-button" id="menuButton" aria-label="Abrir menu">
+        <i data-lucide="menu"></i>
+      </button>
+
+      <div class="crumb">
+        IVAGEST <span>/</span> <strong id="pageTitle">Vendas</strong>
+      </div>
+
+      <div class="top-actions">
+        <button class="icon-button" id="notifBtn" aria-label="Notificações">
+          <i data-lucide="bell"></i><b></b>
+        </button>
+
+        <div class="profile">
+          <div class="avatar">SA</div>
+          <span>
+            <strong>Silvio Admin</strong>
+            <small>Administrador</small>
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <section class="content">
+      <div class="welcome">
+        <div>
+          <p class="eyebrow">FATURAÇÃO</p>
+          <h1>Vendas e Faturas</h1>
+          <p class="muted">Emite novos documentos e controla os pagamentos.</p>
+        </div>
+
+        <div class="welcome-actions">
+          <button class="secondary" data-toast="A exportação SAFT ainda não está ligada ao servidor.">
+            Exportar SAFT
+          </button>
+          <button class="primary" id="newInvoice">
+            <i data-lucide="plus"></i> Nova fatura
+          </button>
+        </div>
+      </div>
+
+      <article class="panel invoices-panel">
+        <div class="panel-heading">
+          <div>
+            <h3>Faturas recentes</h3>
+            <p class="muted">Últimas movimentações registadas</p>
+          </div>
+          <span class="muted" id="invoiceCountLabel">4 documentos</span>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Documento</th>
+                <th>Descrição</th>
+                <th>Estado</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody id="invoiceRows">
+              <tr>
+                <td>
+                  <strong>FT-2026-001</strong>
+                  <small>Cliente A</small>
+                </td>
+                <td>Consultoria mensal</td>
+                <td><span class="status paid">Pago</span></td>
+                <td>125.000 Kz</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>FT-2026-002</strong>
+                  <small>Cliente B</small>
+                </td>
+                <td>Manutenção de equipamentos</td>
+                <td><span class="status pending">Pendente</span></td>
+                <td>87.500 Kz</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>FT-2026-003</strong>
+                  <small>Cliente C</small>
+                </td>
+                <td>Licença anual software</td>
+                <td><span class="status paid">Pago</span></td>
+                <td>210.000 Kz</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>FT-2026-004</strong>
+                  <small>Cliente D</small>
+                </td>
+                <td>Fornecimento de material</td>
+                <td><span class="status pending">Pendente</span></td>
+                <td>425.000 Kz</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <footer>
+        <span>© 2026 IVAGEST</span>
+        <span><i data-lucide="shield-check"></i> Gestão inteligente. Resultados reais.</span>
+      </footer>
+    </section>
+  </main>
+
+  <dialog id="invoiceDialog">
+    <form method="dialog" id="invoiceForm">
+      <div class="dialog-head">
+        <div>
+          <p class="eyebrow">NOVO DOCUMENTO</p>
+          <h2>Criar fatura</h2>
+        </div>
+        <button class="icon-button" value="cancel" aria-label="Fechar" type="button" id="closeDialogBtn">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <label>
+        Nome do cliente
+        <input id="clientName" required placeholder="Ex.: Empresa ABC">
+      </label>
+
+      <label>
+        Descrição
+        <input id="itemDescription" required placeholder="Ex.: Serviços de consultoria">
+      </label>
+
+      <label>
+        Valor (Kz)
+        <input id="invoiceAmount" required type="number" min="1" step="1" placeholder="125000">
+      </label>
+
+      <br>
+
+      <div class="dialog-actions">
+        <button class="secondary" type="button" id="cancelDialogBtn">Cancelar</button>
+        <button class="primary" id="saveInvoice" type="submit">Guardar fatura</button>
+      </div>
+
+      <p class="form-note">Demonstração visual: os dados ficam apenas na página atual.</p>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="js-IVAGEST.js"></script>
+
+
+</body>
+</html>

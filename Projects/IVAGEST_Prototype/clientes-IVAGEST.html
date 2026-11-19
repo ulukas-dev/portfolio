@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IVAGEST | Clientes</title>
+  <link rel="stylesheet" href="style-IVAGEST.css">
+</head>
+<body>
+
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="index-IVAGEST.html">
+      <span class="brand-mark">IV</span>
+      <span>IVAGEST<small>GESTÃO & CONTABILIDADE</small></span>
+    </a>
+
+    <nav>
+      <a class="nav-link" href="index-IVAGEST.html"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+      <a class="nav-link" href="vendas-IVAGEST.html"><i data-lucide="shopping-cart"></i> Vendas</a>
+      <a class="nav-link" href="compras-IVAGEST.html"><i data-lucide="shopping-bag"></i> Compras</a>
+      <a class="nav-link" href="area_contabilidade-IVAGEST.html"><i data-lucide="calculator"></i> Contabilidade</a>
+      <a class="nav-link" href="area_stock-IVAGEST.html"><i data-lucide="package"></i> Stock</a>
+      <a class="nav-link active" href="clientes-IVAGEST.html"><i data-lucide="users"></i> Clientes</a>
+      <a class="nav-link" href="relatorios-IVAGEST.html"><i data-lucide="chart-no-axes-combined"></i> Relatórios</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <i data-lucide="shield-check"></i>
+      <span>Os teus dados, protegidos.</span>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="menu-button" id="menuButton" aria-label="Abrir menu">
+        <i data-lucide="menu"></i>
+      </button>
+
+      <div class="crumb">
+        IVAGEST <span>/</span> <strong id="pageTitle">Clientes</strong>
+      </div>
+
+      <div class="top-actions">
+        <button class="icon-button" id="notifBtn" aria-label="Notificações">
+          <i data-lucide="bell"></i><b></b>
+        </button>
+
+        <div class="profile">
+          <div class="avatar">SA</div>
+          <span>
+            <strong>Silvio Admin</strong>
+            <small>Administrador</small>
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <section class="content">
+      <div class="welcome">
+        <div>
+          <p class="eyebrow">CARTEIRA DE CLIENTES</p>
+          <h1>Clientes</h1>
+          <p class="muted">Contactos comerciais e NIFs registados.</p>
+        </div>
+
+        <div class="welcome-actions">
+          <button class="primary" data-toast="Cadastro de clientes ainda não implementado.">
+            <i data-lucide="user-plus"></i> Novo cliente
+          </button>
+        </div>
+      </div>
+
+      <article class="panel">
+        <div class="panel-heading">
+          <div>
+            <h3>Lista de clientes</h3>
+            <p class="muted">4 empresas ativas</p>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Empresa / Nome</th>
+                <th>NIF</th>
+                <th>Telefone</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Cliente A - Comércio Geral</strong><small>Luanda, Talatona</small></td>
+                <td>5410029384</td>
+                <td>+244 923 111 222</td>
+                <td><span class="status paid">Ativo</span></td>
+              </tr>
+              <tr>
+                <td><strong>Cliente B - Serviços Lda</strong><small>Luanda, Maianga</small></td>
+                <td>5410088120</td>
+                <td>+244 924 555 019</td>
+                <td><span class="status paid">Ativo</span></td>
+              </tr>
+              <tr>
+                <td><strong>Cliente C - Logística</strong><small>Benguela</small></td>
+                <td>5409912341</td>
+                <td>+244 912 300 400</td>
+                <td><span class="status paid">Ativo</span></td>
+              </tr>
+              <tr>
+                <td><strong>Cliente D - Construções</strong><small>Luanda, Viana</small></td>
+                <td>5410044911</td>
+                <td>+244 931 870 112</td>
+                <td><span class="status pending">Com dívida</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <footer>
+        <span>© 2026 IVAGEST</span>
+        <span><i data-lucide="shield-check"></i> Gestão inteligente. Resultados reais.</span>
+      </footer>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="js-IVAGEST.js"></script>
+</body>
+</html>

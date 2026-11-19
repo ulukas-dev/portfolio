@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IVAGEST | Dashboard</title>
+  <link rel="stylesheet" href="style-IVAGEST.css">
+</head>
+<body>
+
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="index-IVAGEST.html">
+      <span class="brand-mark">IV</span>
+      <span>IVAGEST<small>GESTÃO & CONTABILIDADE</small></span>
+    </a>
+
+    <nav>
+      <a class="nav-link active" href="index-IVAGEST.html"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+      <a class="nav-link" href="vendas-IVAGEST.html"><i data-lucide="shopping-cart"></i> Vendas</a>
+      <a class="nav-link" href="compras-IVAGEST.html"><i data-lucide="shopping-bag"></i> Compras</a>
+      <a class="nav-link" href="area_contabilidade-IVAGEST.html"><i data-lucide="calculator"></i> Contabilidade</a>
+      <a class="nav-link" href="area_stock-IVAGEST.html"><i data-lucide="package"></i> Stock</a>
+      <a class="nav-link" href="clientes-IVAGEST.html"><i data-lucide="users"></i> Clientes</a>
+      <a class="nav-link" href="relatorios-IVAGEST.html"><i data-lucide="chart-no-axes-combined"></i> Relatórios</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <i data-lucide="shield-check"></i>
+      <span>Os teus dados, protegidos.</span>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <header class="topbar">
+      <button class="menu-button" id="menuButton" aria-label="Abrir menu">
+        <i data-lucide="menu"></i>
+      </button>
+
+      <div class="crumb">
+        IVAGEST <span>/</span> <strong id="pageTitle">Dashboard</strong>
+      </div>
+
+      <div class="top-actions">
+        <button class="icon-button" id="notifBtn" aria-label="Notificações">
+          <i data-lucide="bell"></i><b></b>
+        </button>
+
+        <div class="profile">
+          <div class="avatar">SA</div>
+          <span>
+            <strong>Silvio Admin</strong>
+            <small>Administrador</small>
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <section class="content">
+      <div class="welcome">
+        <div>
+          <p class="eyebrow">VISÃO GERAL DO NEGÓCIO</p>
+          <h1 id="welcomeTitle">Bom dia</h1>
+          <p class="muted">Aqui está o resumo financeiro da tua empresa.</p>
+        </div>
+
+        <div class="welcome-actions">
+          <input id="dateFilter" type="month" value="2026-10" aria-label="Filtrar por mês">
+          <button class="primary" id="goNewInvoice">
+            <i data-lucide="plus"></i> Nova fatura
+          </button>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <article class="stat-card">
+          <div class="stat-top">
+            <span>Receita total</span>
+            <span class="stat-icon blue"><i data-lucide="wallet"></i></span>
+          </div>
+          <h2 id="revenue">1.248.750,00 Kz</h2>
+          <p class="positive">↑ 12,5% <span>vs. mês anterior</span></p>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-top">
+            <span>Despesas</span>
+            <span class="stat-icon orange"><i data-lucide="receipt"></i></span>
+          </div>
+          <h2 id="expenses">482.320,00 Kz</h2>
+          <p class="negative">↑ 8,3% <span>vs. mês anterior</span></p>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-top">
+            <span>Lucro líquido</span>
+            <span class="stat-icon purple"><i data-lucide="trending-up"></i></span>
+          </div>
+          <h2 id="profit">766.430,00 Kz</h2>
+          <p class="positive">↑ 15,2% <span>vs. mês anterior</span></p>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-top">
+            <span>Faturas pendentes</span>
+            <span class="stat-icon green"><i data-lucide="file-clock"></i></span>
+          </div>
+          <h2 id="pending">637.500,00 Kz</h2>
+          <p class="muted small">4 documentos por liquidar</p>
+        </article>
+      </div>
+
+      
+      <div class="panel dashboard-note">
+        <div class="dashboard-note-content">
+          <div>
+            <strong >Resumo do mês selecionado</strong>
+            <p class="muted" >As tabelas detalhadas e gráficos foram movidos para os respetivos módulos no menu.</p>
+          </div>
+          <a href="vendas-IVAGEST.html" class="text-button" >Ir para Faturas →</a>
+        </div>
+      </div>
+
+      
+      <div class="section-heading">
+        <div>
+          <h2>Ferramentas de gestão</h2>
+          <p class="muted">Acede rapidamente às áreas principais.</p>
+        </div>
+      </div>
+
+      <div class="tools-grid">
+        <a class="tool-card" href="area_contabilidade-IVAGEST.html" >
+          <span class="tool-icon blue"><i data-lucide="calculator"></i></span>
+          <strong>Contabilidade</strong>
+          <p>Organiza contas e acompanha as operações financeiras.</p>
+          <span class="tool-link">Abrir módulo <i data-lucide="arrow-up-right"></i></span>
+        </a>
+
+        <a class="tool-card" href="vendas-IVAGEST.html" >
+          <span class="tool-icon green"><i data-lucide="file-text"></i></span>
+          <strong>Faturação eletrónica</strong>
+          <p>Cria faturas, recibos e acompanha os pagamentos.</p>
+          <span class="tool-link">Criar documento <i data-lucide="arrow-up-right"></i></span>
+        </a>
+
+        <a class="tool-card" href="area_stock-IVAGEST.html" >
+          <span class="tool-icon purple"><i data-lucide="package"></i></span>
+          <strong>Gestão de stock</strong>
+          <p>Consulta produtos, quantidades e preços de venda.</p>
+          <span class="tool-link">Ver inventário <i data-lucide="arrow-up-right"></i></span>
+        </a>
+
+        <a class="tool-card" href="relatorios-IVAGEST.html" >
+          <span class="tool-icon orange"><i data-lucide="chart-column-increasing"></i></span>
+          <strong>Relatórios</strong>
+          <p>Transforma os números em informação para decidir.</p>
+          <span class="tool-link">Ver relatórios <i data-lucide="arrow-up-right"></i></span>
+        </a>
+      </div>
+
+      <footer>
+        <span>2026 IVAGEST</span>
+        <span><i data-lucide="shield-check"></i> Gestão inteligente. Resultados reais.</span>
+      </footer>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="js-IVAGEST.js"></script>
+</body>
+</html>

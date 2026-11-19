@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IVAGEST | Relatórios</title>
+  <link rel="stylesheet" href="style-IVAGEST.css">
+</head>
+<body>
+
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="index-IVAGEST.html">
+      <span class="brand-mark">IV</span>
+      <span>IVAGEST<small>GESTÃO & CONTABILIDADE</small></span>
+    </a>
+
+    <nav>
+      <a class="nav-link" href="index-IVAGEST.html"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+      <a class="nav-link" href="vendas-IVAGEST.html"><i data-lucide="shopping-cart"></i> Vendas</a>
+      <a class="nav-link" href="compras-IVAGEST.html"><i data-lucide="shopping-bag"></i> Compras</a>
+      <a class="nav-link" href="area_contabilidade-IVAGEST.html"><i data-lucide="calculator"></i> Contabilidade</a>
+      <a class="nav-link" href="area_stock-IVAGEST.html"><i data-lucide="package"></i> Stock</a>
+      <a class="nav-link" href="clientes-IVAGEST.html"><i data-lucide="users"></i> Clientes</a>
+      <a class="nav-link active" href="relatorios-IVAGEST.html"><i data-lucide="chart-no-axes-combined"></i> Relatórios</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <i data-lucide="shield-check"></i>
+      <span>Os teus dados, protegidos.</span>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="menu-button" id="menuButton" aria-label="Abrir menu">
+        <i data-lucide="menu"></i>
+      </button>
+
+      <div class="crumb">
+        IVAGEST <span>/</span> <strong id="pageTitle">Relatórios</strong>
+      </div>
+
+      <div class="top-actions">
+        <button class="icon-button" id="notifBtn" aria-label="Notificações">
+          <i data-lucide="bell"></i><b></b>
+        </button>
+
+        <div class="profile">
+          <div class="avatar">SA</div>
+          <span>
+            <strong>Silvio Admin</strong>
+            <small>Administrador</small>
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <section class="content">
+      <div class="welcome">
+        <div>
+          <p class="eyebrow">ANÁLISE ANUAL</p>
+          <h1>Relatórios Financeiros</h1>
+          <p class="muted">Evolução mensal de receitas vs. despesas em 2026.</p>
+        </div>
+
+        <div class="welcome-actions">
+          <button class="secondary" data-print>
+            <i data-lucide="printer"></i> Imprimir
+          </button>
+        </div>
+      </div>
+
+      
+      <article class="panel chart-panel" >
+        <div class="panel-heading">
+          <div>
+            <h3>Evolução financeira</h3>
+            <p class="muted">Receitas e despesas por mês</p>
+          </div>
+
+          <div class="legend">
+            <span><i class="dot blue-dot"></i>Receitas</span>
+            <span><i class="dot orange-dot"></i>Despesas</span>
+          </div>
+        </div>
+
+        <div class="chart" aria-label="Gráfico de receitas e despesas">
+          <div class="y-labels">
+            <span>1,6M</span>
+            <span>1,2M</span>
+            <span>800k</span>
+            <span>400k</span>
+            <span>0</span>
+          </div>
+
+          <div class="chart-area">
+            <div class="grid-lines">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+
+            <div class="x-labels">
+              <span>Jan</span><span>Fev</span><span>Mar</span><span>Abr</span><span>Mai</span><span>Jun</span>
+              <span>Jul</span><span>Ago</span><span>Set</span><span>Out</span><span>Nov</span><span>Dez</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <div class="panel">
+        <h3 >Notas do relatório</h3>
+        <p class="muted" >
+          O terceiro trimestre apresentou um crescimento constante na faturação, principalmente em serviços de consultoria e licenciamento.
+          Recomenda-se rever os custos de consumíveis no próximo mês.
+        </p>
+      </div>
+
+      <footer>
+        <span>© 2026 IVAGEST</span>
+        <span><i data-lucide="shield-check"></i> Gestão inteligente. Resultados reais.</span>
+      </footer>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="js-IVAGEST.js"></script>
+</body>
+</html>
